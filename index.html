@@ -3,10 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nick's Site</title>
+	<link rel = "stylesheet" type = "text/css" href = "css/main.css" />
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,700|Fredoka+One" rel="stylesheet">
 </head>
 <body>
+<div id="wrapper">
+	<div id="header"/>
+		<h1>Monk's Cafe</h1>
+		<h3>"The Coffee Shop"</h3>
+	</div>
+		<h2>Reservations</h2>
+		<div id="make-reservation">
+			<h3>Make a Reservation</h3>
+			<form id="reserve">
+				<input type="text" placeholder="Name"><br />
+				<input type="text" placeholder="Day"><br />
+				<button>Confirm Reservation</button>
+			</form>
+		</div>
+		<div id="existing-reservations">
+			<h3>Existing Reservations</h3>
+			<table>
+				<thead>
+					<th class="name">Name</th>
+					<th class="day">Day</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="name">Santa Claus</td>
+						<td class="day">December 25</td>
+					</tr>
+					<tr>
+						<td class="name">Mickey Mouse</td>
+						<td class="day">January 1</td>
+					</tr>
+					<tr>
+						<td class="name">Michelle Obama</td>
+						<td class="day">Election Day</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-<h1>Hello world! Making edits.</h1>
+	<div class="clear"></div>
+
+	<h2>Come Dine with Us</h2>
+	<div id="map"></div>
+
+	<h2>Customer Reviews</h2>
+	<div class="customer-photo" /></div>
+	<div class="customer-review">
+		<p>"Big&nbsp;lettuce,&nbsp;big&nbsp;carrots,
+		tomatoes&nbsp;like&nbsp;volleyballs."<br />
+	<em>&ndash;&nbsp;Jerry&nbsp;Seinfeld, on&nbsp;The&nbsp;BIG&nbsp;Salad</em></p>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0zF25sd4Juo8F_9-vIu9HTH8FL1TXQvU&callback=initMap" async defer></script>
 
 </body>
 </html>
