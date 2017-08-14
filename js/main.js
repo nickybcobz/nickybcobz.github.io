@@ -1,3 +1,28 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDJEmdjVcr2FgWihi6NnrPdfRuvJnzRjHs",
+    authDomain: "reservation-site-9f770.firebaseapp.com",
+    databaseURL: "https://reservation-site-9f770.firebaseio.com",
+    projectId: "reservation-site-9f770",
+    storageBucket: "reservation-site-9f770.appspot.com",
+    messagingSenderId: "23179045719"
+  };
+  firebase.initializeApp(config);
+
+// Connect to Database
+var database = firebase.database();
+
+// Reservations
+
+var reservationData = {};
+
+$('#reserve').on('submit', function(e) {
+	e.preventDefault();
+	var reservationName = $('#reservationName').val();
+	reservationData.name = reservationName;
+})
+
+// Google Map API
 function initMap() {
 	var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.8054491, lng: -73.9654415},
