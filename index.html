@@ -5,44 +5,39 @@
 	<title>Nick's Site</title>
 	<link rel = "stylesheet" type = "text/css" href = "css/main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,700|Fredoka+One" rel="stylesheet">
+	<script src="https://use.fontawesome.com/c1c11b7498.js"></script>
 </head>
 <body>
 <div id="wrapper">
 	<div id="header"/>
-		<h1>Monk's Cafe</h1>
+		<h1>Monk&rsquo;s Cafe</h1>
 		<h3>"The Coffee Shop"</h3>
 	</div>
 		<h2>Reservations</h2>
-		<div id="make-reservation">
+		<div id="reserve-left">
+			<div id="make-reservation">
 			<h3>Make a Reservation</h3>
 			<form id="reserve">
 				<input type="text" id="reservationName" placeholder="Name"><br />
-				<input type="text" id="reservationDay" placeholder="Day"><br />
+				<input type="text" id="reservationDate" placeholder="Date"><br />
 				<button>Confirm Reservation</button>
 			</form>
+			<span class="error"></span>
 		</div>
+		</div>
+		<div id="reserve-right">
 		<div id="existing-reservations">
 			<h3>Existing Reservations</h3>
 			<table>
 				<thead>
 					<th class="name">Name</th>
-					<th class="day">Day</th>
+					<th class="day">Date</th>
 				</thead>
-				<tbody>
-					<tr>
-						<td class="name">Santa Claus</td>
-						<td class="day">December 25</td>
-					</tr>
-					<tr>
-						<td class="name">Mickey Mouse</td>
-						<td class="day">January 1</td>
-					</tr>
-					<tr>
-						<td class="name">Michelle Obama</td>
-						<td class="day">Election Day</td>
-					</tr>
+				<tbody class="reservations-list">
+					
 				</tbody>
 			</table>
+		</div>
 		</div>
 
 	<div class="clear"></div>
@@ -60,7 +55,21 @@
 
 	<div class="clear"></div>
 </div>
+
+<!-- Handlebars Template -->
+  <script id="reservation-template" type="text/x-handlebars-template">
+    <tr data-id="{{id}}">
+    	<td class="name">
+      		<span>{{name}}</span>
+      	</td>
+      	<td class="day">
+      		<span>{{date}}</span>
+      	</td>
+      </tr>
+  </script>
+
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/main.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0zF25sd4Juo8F_9-vIu9HTH8FL1TXQvU&callback=initMap" async defer></script>

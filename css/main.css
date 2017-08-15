@@ -5,20 +5,26 @@ body {
 }
 
 h1 {
-	font-family: 'Fredoka One', cursive;
-	font-size:64px;
+	font-family: 'Abril Fatface', cursive;
+	font-size:120px;
 	line-height:.85em;
 	font-weight:400;
-	text-transform: uppercase;
+	text-transform: none;
 	color:#FFFFFF;
 	margin:12px;
 	padding:0;
-	text-shadow: 0px 0px 12px #080d43;
+	text-shadow: 0px 0px 12px #000000;
+}
+
+@media (max-width: 600px) {
+	h1 {
+	font-size:68px;
+}
 }
 
 #header h3 {
 	color:#FFFFFF;
-	text-shadow: 0px 0px 12px #080d43;
+	text-shadow: 0px 0px 12px #000000;
 }
 
 h2 {
@@ -29,7 +35,7 @@ h2 {
 	text-transform: uppercase;
 	letter-spacing:2px;
 	margin:0;
-	background-color:#080d43;
+	background-color:#20233e;
 	color:#FFFFFF;
 	padding:6px;
 }
@@ -58,7 +64,7 @@ p {
 #header {
 	width:100%;
 	margin:0 auto 0;
-	padding:100px 0px 24px 0px;
+	padding:120px 0px 44px 0px;
 	background-image:url("../images/header.png");
 	background-repeat: no-repeat;
 	background-position: top;
@@ -72,11 +78,19 @@ p {
 	background-color:#FFFFFF;
 }
 
-#make-reservation {
-	width:40%;
+#reserve-left {
 	float:left;
-	margin:12px 0px 12px 12px;
-	padding:12px;
+	width:50%;
+}
+
+#reserve-right {
+	float:right;
+	width:50%;
+}
+
+#make-reservation {
+	margin:6px;
+	padding:16px;
 	border:1px solid #EEEEEE;
 	background-color:#ebecf6;
 }
@@ -89,11 +103,17 @@ p {
 	margin-top:12px;
 }
 
+.error {
+	color:red;
+	font-family: 'Open Sans', sans-serif;
+	font-size:11px;
+	line-height:1.2em;
+	margin:0;
+}
+
 #existing-reservations {
-	width:45%;
-	float:right;
-	margin:12px 12px 12px 0px;
-	padding:12px;
+	margin:6px;
+	padding:16px;
 	border:1px solid #EEEEEE;
 }
 
@@ -106,14 +126,21 @@ p {
 }
 
 .name {
+	width:50%;
 	text-align:right;
+	padding-right:12px;
 	font-weight: 400;
 }
 
 .day {
+	width:50%;
 	text-align:left;
 	padding-left:12px;
 	font-weight: 400;
+}
+
+.fa fa-trash delete {
+	color:#CCCCCC;
 }
 
 th.name, th.day {
@@ -123,18 +150,14 @@ th.name, th.day {
 }
 
 @media (max-width: 600px) {
-	#make-reservation {
-		width:90%;
+	#reserve-left {
+		width:100%;
 		float:none;
-		margin:12px auto 6px;
-		padding:12px 0px 12px 0px;
 	}
 
-	#existing-reservations {
-		width:90%;
+	#reserve-right {
+		width:100%;
 		float:none;
-		margin:12px auto 12px;
-		padding:12px 0px 12px 0px;
 	}
 }
 
